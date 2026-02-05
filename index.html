@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雲孃罐罐米線｜雲霧裡的暖心儀式</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-brown: #5d4037;
+      --accent-green: #81c784;
+      --bg-cream: #f9f7f2;
+      --text-dark: #3e2723;
+      --mist-white: rgba(255, 255, 255, 0.85);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .quote {
+      font-family: 'Noto Serif TC', serif;
+    }
+
+    /* Video Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      filter: brightness(0.6) contrast(1.1);
+    }
+
+    .hero-content {
+      z-index: 1;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      letter-spacing: 4px;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    /* Story Section */
+    .section {
+      padding: 100px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .story-card {
+      background: var(--mist-white);
+      padding: 60px 40px;
+      border-radius: 2px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      position: relative;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .story-card p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: var(--primary-brown);
+    }
+
+    .highlight {
+      color: var(--accent-green);
+      font-weight: 700;
+    }
+
+    /* Assets Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .grid-item {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      height: 300px;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .grid-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Info Section */
+    .info-footer {
+      background: var(--primary-brown);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cta {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .schedule {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      display: inline-block;
+      padding: 10px 30px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .grid { grid-template-columns: 1fr; }
+      .section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="videos/noodle_process.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>雲孃罐罐米線</h1>
+      <p class="quote">「在清境，我們選擇做最慢的人。」</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="story-card">
+      <p>不加修飾澱粉，只有從<span class="highlight">米漿長出來的靈魂</span>。</p>
+      <p>一碗米線，一場山林裡的味覺旅行。</p>
+      
+      <div class="grid">
+        <div class="grid-item">
+          <img src="images/rice.jpg" alt="純淨米粒">
+        </div>
+        <div class="grid-item">
+          <img src="images/noodles.jpg" alt="職人製麵">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="info-footer">
+    <p class="cta">🍃 週末上山，來喝一罐溫潤的酸湯吧！</p>
+    <div class="schedule">🕰️ 每週五六日 準時開鍋</div>
+  </footer>
+
+</body>
+</html>
